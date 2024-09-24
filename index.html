@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Iframe Pop-up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+        #closeBtn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<button id="openBtn">Retro Bowl</button>
+
+<div id="popup">
+    <button id="closeBtn">Close</button>
+</div>
+
+<script>
+    const openBtn = document.getElementById('openBtn');
+    const popup = document.getElementById('popup');
+    const closeBtn = document.getElementById('closeBtn');
+
+    openBtn.onclick = () => {
+        window.open('https://cloudy-flax-acorn.glitch.me/', '_blank');
+    };
+
+    closeBtn.onclick = () => {
+        popup.style.display = 'none';
+    };
+</script>
+
+</body>
+</html>
